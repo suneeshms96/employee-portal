@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>TECHO LEGEND</title>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+  <style>
+    /* Custom radio button container */
+    .radio-container {
+        display: inline-block;
+        position: relative;
+        padding-left: 35px;
+        margin-right: 15px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    /* Hide default radio button */
+    .radio-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    /* Custom radio button design */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+
+    /* When the radio button is checked, change background color */
+    .radio-container input:checked ~ .checkmark {
+        background-color: #2196F3;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when radio button is checked */
+    .radio-container input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .radio-container .checkmark:after {
+        top: 6px;
+        left: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    }
+</style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand mr-5" href="index.html">
+            <img src="static/images/logo.png" alt="">
+            <span>
+              TECHO LEGEND
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+             <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/emphome/">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                 
+                  <li class="nav-item">
+                    <a class="nav-link" href="/viewmytask/"> VIEW MY TASK </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/questionair/">ATTRITION</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/stressdet/">DEPRESSION</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/logout/"> Logout </a>
+                  </li>
+              </ul>
+              <form class="form-inline">
+                <!-- <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button> -->
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+  <div class="body_bg layout_padding">
+    <!-- contact section -->
+
+    <section class="contact_section">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            ATTRITION
+          </h2>
+        </div>
+      </div>
+      <div class="container contact_bg layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact_form ">
+              <form action="/predict/" method="GET" autocomplete="on">
+
+               <table>
+          
+                <strong>Age</strong> : <input type="number" name="Age" class="form-control" placeholder="18-80" required min="18" max="80"><br>
+    <strong>BusinessTravel</strong> : 
+    <label class="radio-container">Rarely
+        <input type="radio" name="BusinessTravel" value="Rarely">
+        <span class="checkmark"></span>
+    </label>
+    <label class="radio-container">Frequently
+        <input type="radio" name="BusinessTravel" value="Frequently">
+        <span class="checkmark"></span>
+    </label>
+    <label class="radio-container">No Travel
+        <input type="radio" name="BusinessTravel" value="No Travel">
+        <span class="checkmark"></span>
+    </label>
+    <br><br>
+          
+                <strong>Daily Rate</strong> : <input type="number" class="form-control" name="Daily Rate" placeholder="100-1600" required min="100" max="1600" size="30"><br>
+          
+                <strong>Department</strong>:
+    <label class="radio-container">Research & Development
+        <input type="radio" name="Department" value="Research & Development">
+        <span class="checkmark"></span>
+    </label>
+    <label class="radio-container">Human Resources
+        <input type="radio" name="Department" value="Human Resources">
+        <span class="checkmark"></span>
+    </label>
+    <label class="radio-container">Sales
+        <input type="radio" name="Department" value="Sales">
+        <span class="checkmark"></span>
+    </label><br><br>
+
+    <strong>Distance From Home (in km)</strong> : <input type="number" class="form-control" name="Distance From Home" placeholder="1-29" required min="1" max="29"><br>
+          
+                <strong>Education</strong> : <input type="number" class="form-control"name="Education" placeholder="1- 10th,  2 -12th,  3-Graduation, 4-Post Graduation, 5-Doctorate" required min="1" max="5"><br>
+          
+                <strong>Education Field:</strong>
+                <select name="education_field" id="education_field">
+                 <option value="" selected disabled>Select an option</option> 
+                <option value="Life Sciences">Life Sciences</option>
+                <option value="Medical">Medical</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Technical Degree">Technical Degree</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Other">Other</option>
+                </select> <br><br>
+        
+                <strong>Environment Satisfaction</strong> : <input type="number" class="form-control" name="Environment Satisfaction" placeholder="1-Low,  2-Medium,  3-High,  4-Very High" required min="1" max="4"><br>
+          
+                <strong>Gender</strong> :
+    <label class="radio-container">Male
+        <input type="radio" name="Gender" id="Male" value="Male">
+        <span class="checkmark"></span>
+    </label>
+    <label class="radio-container">Female
+        <input type="radio" name="Gender" id="Female" value="Female">
+        <span class="checkmark"></span>
+    </label>
+    <br><br>
+          
+                <strong>Hourly Rate</strong> : <input type="number" class="form-control" name="Hourly Rate" placeholder="30-100" required min="30" max="100"><br>
+          
+                <strong>Job Involvement</strong> : <input type="number" class="form-control" name="Job Involvement" placeholder="1-Low,  2-Medium,  3-High,  4-Very High" required min="1" max="4"><br>
+          
+                <strong>Job Level</strong> : <input type="number" class="form-control" name="Job Level" placeholder="1-Low,  2-Medium,  3-High,  4-Very High" required min="1" max="5"><br>
+          
+                <strong>Job Role</strong>:
+               <select name="Job Role" id="job_role">
+                <option value="" selected disabled>Select an option</option>
+               <option value="Sales Executive">Sales Executive</option>
+               <option value="Research Scientist">Research Scientist</option>
+               <option value="Laboratory Technician">Laboratory Technician</option>
+               <option value="Manufacturing Director">Manufacturing Director</option>
+               <option value="Healthcare Representative">Healthcare Representative</option>
+               <option value="Manager">Manager</option>
+               <option value="Sales Representative">Sales Representative</option>
+               <option value="Research Director">Research Director</option>
+               <option value="Human Resources">Human Resources</option>
+               </select>
+               <br><br>
+
+               <strong>Job Satisfaction</strong> : <input type="number" class="form-control" name="Job Satisfaction" placeholder="1-Low,  2-Medium,  3-High,  4-Very High" required min="1" max="4"><br>
+          
+               <strong>Marital Status</strong> :
+   <label class="radio-container">Married
+       <input type="radio" name="Marital Status" id="Married" value="Married">
+       <span class="checkmark"></span>
+   </label>
+   <label class="radio-container">Single
+       <input type="radio" name="Marital Status" id="Single" value="Single">
+       <span class="checkmark"></span>
+   </label>
+   <label class="radio-container">Divorced
+    <input type="radio" name="Marital Status" id="Divorced" value="Divorced">
+    <span class="checkmark"></span>
+</label>
+<strong>Monthly Income</strong> : <input type="number" class="form-control" name="Monthly Income" placeholder="1000-20000" required min="1000" max="20000" size="30"> <br>
+            </table>
+              
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="contact_form ">
+              <table>
+    <br><br>
+                
+          
+                <strong>Number of Companies Worked in</strong> : <input type="number" class="form-control" name="Number of Companies Worked in" placeholder="0-9" required min="1" max="9"><br>
+          
+                <strong>Over Time</strong> :
+<label class="radio-container">Yes
+    <input type="radio" name="Over Time" id="Yes" value="Yes">
+    <span class="checkmark"></span>
+</label>
+<label class="radio-container">No
+    <input type="radio" name="Over Time" id="No" value="No">
+    <span class="checkmark"></span>
+</label><br><br>
+          
+                <strong>Performance Rating</strong> : <input type="number" class="form-control" name="Performance Rating" placeholder="1-Low,  2-Good,  3-Excellent,  4-Outstanding" required min="1" max="4"><br>
+          
+                <strong>Relationship Satisfaction</strong> : <input type="number" class="form-control" name="Relationship Satisfaction" placeholder="1-Low,  2-Medium,  3-High,  4-Very High" required min="1" max="4"><br>
+          
+                <strong>Stock Option Level</strong> : <input type="number" class="form-control" name="Stock Option Level" placeholder="0-3" required min="0" max="3"><br>
+          
+                <strong>Total Working Years</strong> : <input type="number" class="form-control" name="Total Working Years" placeholder="0-40" required min="0" max="40"><br>
+          
+                <strong>Training Times Last Year</strong> : <input type="number" class="form-control" name="Training Times Last Year" placeholder="0-6" required min="0" max="6"><br>
+          
+                <strong>Work Life Balance</strong> : <input type="number" class="form-control" name="Work Life Balance" placeholder="1-Bad,  2-Good,  3-Better,  4-Best" required min="1" max="4"><br>
+          
+                <strong>Years At Company</strong> : <input type="number" class="form-control" name="Years At Company" placeholder="0-40" required min="0" max="40"><br>
+          
+                <strong>Years In Current Role</strong> : <input type="number" class="form-control" name="Years In Current Role" placeholder="0-18" required min="0" max="18"><br>
+          
+                <strong>Years Since Last Promotion</strong> : <input type="number" class="form-control" name="Years Since Last Promotion" placeholder="0-15" required min="0" max="15"><br>
+          
+                <strong>Years With Curr Manager</strong> : <input type="number" class="form-control" name="Years With Curr Manager" placeholder="0-17" required min="0" max="17"><br>
+
+                <br><button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+        </table>
+      </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end contact section -->
+
+  </div>
+  <!-- info section -->
+
+  <section class="info_section layout_padding">
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2024 All Rights Reserved By
+      <a href="https://html.design/">TECHO LEGEND</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+
+</body>
+
+</html>

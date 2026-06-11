@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>TECHO LEGEND</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+  <style>
+    /* Custom radio button container */
+    .radio-container {
+        display: inline-block;
+        position: relative;
+        padding-left: 35px;
+        margin-right: 15px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    /* Hide default radio button */
+    .radio-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    /* Custom radio button design */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+
+    /* When the radio button is checked, change background color */
+    .radio-container input:checked ~ .checkmark {
+        background-color: #2196F3;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when radio button is checked */
+    .radio-container input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .radio-container .checkmark:after {
+        top: 6px;
+        left: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+    }
+</style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand mr-5" href="index.html">
+            <img src="static/images/logo.png" alt="">
+            <span>
+              TECHO LEGEND
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/adminhome/">Home <span class="sr-only">(current)</span></a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="/adddept/"> Add Dept </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/viewdept/"> Dept</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewheads/"> Heads</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/viewwork/">Works</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Report
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <!-- Add your dropdown items here -->
+                      <a class="dropdown-item" href="/svreport/">Emotion Report</a>
+                      <a class="dropdown-item" href="/surveyReport/">Survey Report</a>
+                   
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout/"> Logout </a>
+                  </li>
+              </ul>
+              <form class="form-inline">
+                <!-- <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button> -->
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+
+
+  <div class="body_bg layout_padding">
+
+
+    <!-- contact section -->
+
+    <section class="contact_section">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            ADD DEPARTMENT HEAD
+          </h2>
+        </div>
+      </div>
+      <div class="container contact_bg layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact_form ">
+              <form action="/headassign/">
+                <table>
+                    <input type="hidden" name="dname" value="{{dname}}">
+                    <tr>
+                        <td>First Name</td>
+                        <td style="background-color: white;"><input type="text" name="fname" placeholder="Enter First Name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input type="text" name="lname" placeholder="Enter Last Name" required></td>
+                    </tr>
+                    <tr>
+                      <td>Address</td>
+                      <td><textarea name="address" placeholder="Enter Address details" style="background-color: rgb(18, 17, 27); color: white;" required></textarea></td>
+                  </tr>
+                    <tr>
+                        <td>Phone number</td>
+                        <td><input type="text" name="phone" placeholder="Enter phone number" maxlength="10" required></td>
+                    </tr>
+                    <tr>
+                      <td>Gender</td>
+                      <td>
+                          <label class="radio-container">Male
+                              <input type="radio" value="male" name="gender">
+                              <span class="checkmark"></span>
+                          </label>
+                          <label class="radio-container">Female
+                              <input type="radio" value="female" name="gender">
+                              <span class="checkmark"></span>
+                          </label>
+                      </td>
+                  </tr> 
+                    <tr>
+                        <td>Designation</td>
+                        <td><input type="text" name="desig" placeholder="Enter designation" required></td>
+                    </tr>
+                    <tr>
+                        <td>Experience</td>
+                        <td><input type="text" name="exp" placeholder="Enter experience" required></td>
+                    </tr>
+                    <tr>
+                        <td>Qualification</td>
+                        <td><input type="text" name="qual" placeholder="Enter Qualification" required></td>
+                    </tr>
+                    <tr>
+                        <td>DOB</td>
+                        <td><input type="date" name="dob" placeholder="Enter Date of birth" required></td>
+                    </tr>
+                    <tr>
+                        <td>Date of joining</td>
+                        <td><input type="date" name="doj" placeholder="Enter Date of Joining" max="{{today}}" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="username" required placeholder="Enter email"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" placeholder="Enter password" required></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" align="center">
+                          <input type="submit" value="Register" style="background-color: rgb(197, 113, 58); color: white;">
+                      </td>
+                  </tr>
+                </table>
+            </form>
+            
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="/static/images/about-img.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end contact section -->
+
+  </div>
+  <!-- info section -->
+  <section class="info_section layout_padding">
+  </section>
+  <!-- end info section -->
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2024 All Rights Reserved By
+      <a href="https://html.design/">TECHO LEGEND</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+
+</body>
+
+</html>

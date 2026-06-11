@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <style>
+        #customers {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 6px;
+        }
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #ddd;}
+        #customers th {
+          padding-top: 5px;
+          padding-bottom: 5px;
+          text-align: left;
+          background-color: #393538;
+          color: white;
+        }
+        #customers th,td
+        {
+            padding-left:5px;
+            padding-right:65px;
+            
+        }
+        </style>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>TECHO LEGEND</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand mr-5" href="index.html">
+            <img src="static/images/logo.png" alt="">
+            <span>
+              TECHO LEGEND
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/depthome/">Home <span class="sr-only">(current)</span></a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link" href="/employees/"> ADD EMPLOYEES </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/viewemp/">MY EMPLOYEES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/allocatedwork/">ALLOCATED WORKS</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Report
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <!-- Add your dropdown items here -->
+                      <a class="dropdown-item" href="/hsvreport/">Emotion Report</a>
+                      <a class="dropdown-item" href="/hsurveyReport/">Survey Report</a>
+                   
+              </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/viewwork/">View Works</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout/"> Logout </a>
+                  </li>
+              </ul>
+              <form class="form-inline">
+                <!-- <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button> -->
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+
+
+  <div class="body_bg layout_padding">
+
+
+    <!-- contact section -->
+
+    <section class="contact_section">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            VIEW WORKS
+          </h2>
+        </div>
+      </div>
+      <div class="container contact_bg layout_padding2-top">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="contact_form ">
+              <form >
+                <center>
+                <table id="customers" border="2" >
+                    <tr>
+                        <th>Head</th>
+                        <th>Emotion</th>
+                        <th>Date</th>
+                       
+                    </tr>
+                    {% for u in use %}
+                    <tr>
+                        <td>{{u.emp_fname}}</td>
+                        <td>{{u.emotion}}</td>
+                        <td>{{u.date}}</td>
+                       
+                    </tr>
+                    {% endfor %}
+                </center>
+                </table>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end contact section -->
+
+  </div>
+  <!-- info section -->
+
+  <section class="info_section layout_padding">
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2024 All Rights Reserved By
+      <a href="https://html.design/">TECHO LEGEND</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>TECHO LEGEND</title>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+  <style>
+   /* Custom radio button container */
+   .radio-container {
+       display: inline-block;
+       position: relative;
+       padding-left: 35px;
+       margin-right: 15px;
+       cursor: pointer;
+       font-size: 16px;
+   }
+
+   /* Hide default radio button */
+   .radio-container input {
+       position: absolute;
+       opacity: 0;
+       cursor: pointer;
+   }
+
+   /* Custom radio button design */
+   .checkmark {
+       position: absolute;
+       top: 0;
+       left: 0;
+       height: 20px;
+       width: 20px;
+       background-color: #eee;
+       border-radius: 50%;
+   }
+
+   /* When the radio button is checked, change background color */
+   .radio-container input:checked ~ .checkmark {
+       background-color: #2196F3;
+   }
+
+   /* Create the checkmark/indicator (hidden when not checked) */
+   .checkmark:after {
+       content: "";
+       position: absolute;
+       display: none;
+   }
+
+   /* Show the checkmark when radio button is checked */
+   .radio-container input:checked ~ .checkmark:after {
+       display: block;
+   }
+
+   /* Style the checkmark/indicator */
+   .radio-container .checkmark:after {
+       top: 6px;
+       left: 6px;
+       width: 8px;
+       height: 8px;
+       border-radius: 50%;
+       background: white;
+   }
+</style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand mr-5" href="index.html">
+            <img src="static/images/logo.png" alt="">
+            <span>
+              TECHO LEGEND
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+             <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/emphome/">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                 
+                  <li class="nav-item">
+                    <a class="nav-link" href="/viewmytask/"> VIEW MY TASK </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/questionair/">ATTRITION</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/stressdet/">DEPRESSION</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/logout/"> Logout </a>
+                  </li>
+              </ul>
+              <form class="form-inline">
+                <!-- <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button> -->
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+  <div class="body_bg layout_padding">
+    <!-- contact section -->
+
+    <section class="contact_section">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            DEPRESSION
+          </h2>
+        </div>
+      </div>
+      <div class="container contact_bg layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact_form ">
+               <form action="/dpract/">
+                  <table>
+
+                     <strong>Q1</strong>:
+                     <br><br>
+                     <label class="radio-container">I do not feel sad
+                         <input type="radio" name="Q1" value="0" required>
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I feel sad
+                         <input type="radio" name="Q1" value="1">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">I am sad all the time and I can't snap out of it
+                         <input type="radio" name="Q1" value="2">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">Iam so sad and unhappy that I can't stand it
+                        <input type="radio" name="Q1" value="3">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+
+                      <strong>Q2</strong>:
+                     <br><br>
+                     <label class="radio-container">Iam not particularly discouraged about the future
+                         <input type="radio" name="Q2" value="0">
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I feel discourged about the future
+                         <input type="radio" name="Q2" value="1">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">I feel I have nothing to look forward to
+                         <input type="radio" name="Q2" value="2">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">I feel the future is hopeless and that things cannot improve.
+                        <input type="radio" name="Q2" value="3">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+
+                      <strong>Q3</strong>:
+                     <br><br>
+                     <label class="radio-container">I do not feel like a failure.
+                         <input type="radio" name="Q3" value="0">
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I feel I have failed more than the average person
+                         <input type="radio" name="Q3" value="1">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">As I look back on my life, all I can see is a lot of failures
+                         <input type="radio" name="Q3" value="2">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">I feel I am a complete failure as a person
+                        <input type="radio" name="Q3" value="3">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+
+                      <strong>Q4</strong>:
+                     <br><br>
+                     <label class="radio-container">I get as much satisfaction out of things as I used to
+                         <input type="radio" name="Q4" value="0">
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I don't enjoy things the way I used to
+                         <input type="radio" name="Q4" value="1">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">I don't get real satisfaction out of anything anymore
+                         <input type="radio" name="Q4" value="2">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">I am dissatisfied or bored with everything
+                        <input type="radio" name="Q4" value="3">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+                    
+                    <strong>Q5</strong>:
+                    <br><br>
+                    <label class="radio-container">I don't feel particularly guilty
+                        <input type="radio" name="Q5" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I feel guilty a good part of the time
+                        <input type="radio" name="Q5" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I feel quite guilty most of the time
+                        <input type="radio" name="Q5" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I feel guilty all of the time
+                       <input type="radio" name="Q5" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                       <strong>Q6</strong>:
+                     <br><br>
+                     <label class="radio-container">I don't feel I am being punished
+                         <input type="radio" name="Q6" value="0">
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I feel I may be punished
+                         <input type="radio" name="Q6" value="1">
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I expect to be punished
+                         <input type="radio" name="Q6" value="2">
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I feel I am being punished
+                        <input type="radio" name="Q6" value="3">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+
+                      <strong>Q7</strong>:
+                     <br><br>
+                     <label class="radio-container">I don't feel disappointed in myself
+                         <input type="radio" name="Q7" value="0">
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I am disappointed in myself
+                         <input type="radio" name="Q7" value="1">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">I am disgusted with myself
+                         <input type="radio" name="Q7" value="2">
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I hate myself
+                        <input type="radio" name="Q7" value="3">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+
+                      <strong>Q8</strong>:
+                     <br><br>
+                     <label class="radio-container">I don't feel I am any worse than anybody else
+                         <input type="radio" name="Q8" value="0">
+                         <span class="checkmark"></span>
+                     </label><br>
+                     <label class="radio-container">I am critical of myself for my weaknesses or mistakes
+                         <input type="radio" name="Q8" value="1">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">I blame myself all the time for my faults
+                         <input type="radio" name="Q8" value="2">
+                         <span class="checkmark"></span>
+                     </label>
+                     <label class="radio-container">I blame myself for everything bad that happens
+                        <input type="radio" name="Q8" value="3">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br><br>
+
+                        <strong>Q9</strong>:
+                    <br><br>
+                    <label class="radio-container">I don't have any thoughts of killing myself
+                        <input type="radio" name="Q9" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I have thoughts of killing myself, but I would not carry them out
+                        <input type="radio" name="Q9" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I would like to kill myself
+                        <input type="radio" name="Q9" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I would kill myself if I had the chance
+                       <input type="radio" name="Q9" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q10</strong>:
+                    <br><br>
+                    <label class="radio-container">I don't cry any more than usual
+                        <input type="radio" name="Q10" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I cry more now than I used to
+                        <input type="radio" name="Q10" value="1">
+                        <span class="checkmark"></span>
+                    </label><br>
+
+                    <label class="radio-container">I cry all the time now
+                        <input type="radio" name="Q10" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I used to be able to cry, but now I can't cry even though I want to
+                       <input type="radio" name="Q10" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                        <strong>Q11</strong>:
+                    <br><br>
+                    <label class="radio-container">I am no more irritated by things than I ever was
+                        <input type="radio" name="Q11" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I am slightly more irritated now than usual
+                        <input type="radio" name="Q11" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I am quite annoyed or irritated a good deal of the time
+                        <input type="radio" name="Q11" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I feel irritated all the time
+                       <input type="radio" name="Q11" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q12</strong>:
+                    <br><br>
+                    <label class="radio-container">I have not lost interest in other people
+                        <input type="radio" name="Q12" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I am less interested in other people than I used to be
+                        <input type="radio" name="Q12" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I have lost most of my interest in other people
+                        <input type="radio" name="Q12" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I have lost all of my interest in other people
+                       <input type="radio" name="Q12" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q13</strong>:
+                    <br><br>
+                    <label class="radio-container">I make decisions about as well as I ever could
+                        <input type="radio" name="Q13" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container"> I put off making decisions more than I used to
+                        <input type="radio" name="Q13" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I have greater difficulty in making decisions more than I used to
+                        <input type="radio" name="Q13" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container"> I can't make decisions at all anymore
+                       <input type="radio" name="Q13" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q14</strong>:
+                    <br><br>
+                    <label class="radio-container"> I don't feel that I look any worse than I used to
+                        <input type="radio" name="Q14" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I am worried that I am looking old or unattractive
+                        <input type="radio" name="Q14" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">II feel there are permanent changes in my appearance that make me look
+                      unattractive
+                        <input type="radio" name="Q14" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I believe that I look ugly
+                       <input type="radio" name="Q14" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q15</strong>:
+                    <br><br>
+                    <label class="radio-container">I can work about as well as before
+                        <input type="radio" name="Q15" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">It takes an extra effort to get started at doing something
+                        <input type="radio" name="Q15" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I have to push myself very hard to do anything
+                        <input type="radio" name="Q15" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I can't do any work at all
+                       <input type="radio" name="Q15" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q16</strong>:
+                    <br><br>
+                    <label class="radio-container">I can sleep as well as usual
+                        <input type="radio" name="Q16" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I don't sleep as well as I used to
+                        <input type="radio" name="Q16" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container"> I wake up 1-2 hours earlier than usual and find it hard to get back to sleep
+                        <input type="radio" name="Q16" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I wake up several hours earlier than I used to and cannot get back to sleep
+                       <input type="radio" name="Q16" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q17</strong>:
+                    <br><br>
+                    <label class="radio-container">I don't get more tired than usual
+                        <input type="radio" name="Q17" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container"> I get tired more easily than I used to
+                        <input type="radio" name="Q17" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container"> I get tired from doing almost anything
+                        <input type="radio" name="Q17" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I am too tired to do anything
+                       <input type="radio" name="Q17" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q18</strong>:
+                    <br><br>
+                    <label class="radio-container"> My appetite is no worse than usual
+                        <input type="radio" name="Q18" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">My appetite is not as good as it used to be
+                        <input type="radio" name="Q18" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">My appetite is much worse now
+                        <input type="radio" name="Q18" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I have no appetite at all anymore
+                       <input type="radio" name="Q18" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q19</strong>:
+                    <br><br>
+                    <label class="radio-container">I haven't lost much weight, if any, lately
+                        <input type="radio" name="Q19" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I have lost more than five pounds
+                        <input type="radio" name="Q19" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container"> I have lost more than ten pounds
+                        <input type="radio" name="Q19" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container"> I have lost more than fifteen pounds
+                       <input type="radio" name="Q19" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q20</strong>:
+                    <br><br>
+                    <label class="radio-container"> I am no more worried about my health than usual
+                        <input type="radio" name="Q20" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I am worried about physical problems like aches, pains, upset stomach, or
+                      constipation
+                        <input type="radio" name="Q20" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container"> I am very worried about physical problems and it's hard to think of much else
+                        <input type="radio" name="Q20" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I am so worried about my physical problems that I cannot think of anything else
+                       <input type="radio" name="Q20" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                      <strong>Q21</strong>:
+                    <br><br>
+                    <label class="radio-container">I have not noticed any recent change in my interest in sex
+                        <input type="radio" name="Q21" value="0">
+                        <span class="checkmark"></span>
+                    </label><br>
+                    <label class="radio-container">I am less interested in sex than I used to be
+                        <input type="radio" name="Q21" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I have almost no interest in sex
+                        <input type="radio" name="Q21" value="2">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">I have lost interest in sex completely
+                       <input type="radio" name="Q21" value="3">
+                       <span class="checkmark"></span>
+                   </label>
+                   <br><br>
+
+                   <br><button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+                  </table>  
+                </form>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end contact section -->
+
+  </div>
+  <!-- info section -->
+
+  <section class="info_section layout_padding">
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2024 All Rights Reserved By
+      <a href="https://html.design/">TECHO LEGEND</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+
+</body>
+
+</html>

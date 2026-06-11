@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>TECHO LEGEND</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand mr-5" href="index.html">
+            <img src="static/images/logo.png" alt="">
+            <span>
+              TECHO LEGEND
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/depthome/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/employees/"> ADD EMPLOYEES </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/viewemp/">MY EMPLOYEES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/allocatedwork/">ALLOCATED WORKS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout/"> Logout </a>
+                  </li>  
+              </ul>
+              <form class="form-inline">
+                <!-- <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button> -->
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+  <div class="body_bg layout_padding">
+    <!-- contact section -->
+
+    <section class="contact_section">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            UPDATE EMPLOYEE DETAILS
+          </h2>
+        </div>
+      </div>
+      <div class="container contact_bg layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact_form ">
+              <form action="/updateemp/">
+                <table>
+                    {% for n in tk %}
+            <input type="hidden" name="id" value="{{n.hid}}">
+            <!-- <tr><td>dname</td><td><input type="text" name="dname" value="{{n.dname}}" required ></td></tr> -->
+            <tr><td>First Name</td><td><input type="text" name="fname" value="{{n.fname}}" required></td></tr>
+            <tr><td>Last Name</td><td><input type="text" name="lname" value="{{n.lname}}" required></td></tr>
+            <tr><td>Address</td><td><input type="text" name="address" value="{{n.address}}" required></td></tr>
+            <tr><td>phone number</td><td><input type="text" name="phone" value="{{n.phone}}" required></td></tr>
+            <tr><td>gender</td><td><input type="text" name="gender" value="{{n.gender}}" required></td></tr>
+            <tr><td>Designation</td><td><input type="text" name="desig" value="{{n.desig}}" required></td></tr>
+            <tr><td>Experience</td><td><input type="text" name="exp" value="{{n.exp}}" required></td></tr>
+            <tr><td>Qualification</td><td><input type="text" name="qual" value="{{n.qual}}" required></td></tr>
+            <tr><td>DOB</td><td><input type="text" name="dob" value="{{n.dob}}" required></td></tr>
+            <tr><td>Date of joining</td><td><input type="text" name="doj" value="{{n.doj}}" required></td></tr>
+            <tr><td colspan="2" align="center"><input type="submit" value="update"></td></tr>
+        </table>
+        {% endfor %}
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="/static/images/about-img.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end contact section -->
+
+  </div>
+  <!-- info section -->
+  <section class="info_section layout_padding">
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2024 All Rights Reserved By
+      <a href="https://html.design/">TECHO LEGEND</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+
+</body>
+
+</html>
