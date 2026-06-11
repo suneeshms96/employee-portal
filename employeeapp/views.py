@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import HttpResponseRedirect,redirect
 from django.db import connection
+import os
+from django.conf import setting
 # import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
@@ -137,7 +139,11 @@ import _pickle as pickle
 import numpy as np
 import scipy as sp
 import pandas as pd
-model = pickle.load (open ('E:/Projects/2026/employee (10)/employee/employeeapp/model.pkl','rb'))
+#model = pickle.load (open ('E:/Projects/2026/employee (10)/employee/employeeapp/model.pkl','rb'))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, 'model.pkl')
+model = pickle.load(open(model_path, 'rb'
+
 
 def predict(request):
 	"""
